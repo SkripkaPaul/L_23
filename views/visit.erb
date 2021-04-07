@@ -1,0 +1,76 @@
+
+<h2> Записаться </h2>
+
+
+<script type="text/javascript">
+
+$(function (){
+
+	$('#color').simplecolorpicker();
+
+
+});
+
+	</script>
+
+
+
+<form action="/visit" method="POST" role ="form">
+
+	
+  <div class="mb-3">
+    <label  class="form-label">Введите ваше имя</label>
+    <input  type="text" name="username" class="form-control" placeholder ="имя" value=<%=@user_name%>>
+</div> <br>
+
+  <div class="mb-3">
+    <label  class="form-label">Введите ваш номер телефона</label>
+    <input  type="text" name="userphone" class="form-control" placeholder ="номер телефона" value=<%=@user_phone%>>
+</div> <br>
+
+  <div class="form-group">
+    <label>Укажите дату записи</label>
+    <input   type="text" name="datevisit" class="form-control" placeholder ="дата" value=<%=@date_visit%>>
+</div> <br>
+
+  <div class="mb-3">
+    <label  class="form-label">Укажите время записи</label>
+    <input   type="text" name="timevisit" class="form-control" placeholder ="время" value=<%=@time_visit%>>
+</div> <br>
+
+<select class="form-select" name="barbers" aria-label="Default select example">
+  <option selected>Выберете парикмахера</option>
+
+
+  <!-- <option <% @barb == "name" ? 'selected' : '' %>> <%= @barb %> </option>
+ -->
+
+
+
+
+   </select> <br>
+<br>
+
+	<label  class="form-label">Укажите цвет краски для волос</label>
+
+	<select id="color" name="colorpicker">
+  <option value="#7bd148">Green</option>
+  <option value="#5484ed">Bold blue</option>
+  <option value="#a4bdfc">Blue</option>
+  <option value="#46d6db">Turquoise</option>
+  <option value="#7ae7bf">Light green</option>
+  <option value="#51b749">Bold green</option>
+  <option value="#fbd75b">Yellow</option>
+  <option value="#ffb878">Orange</option>
+  <option value="#ff887c">Red</option>
+  <option value="#dc2127">Bold red</option>
+  <option value="#dbadff">Purple</option>
+  <option value="#e1e1e1">Gray</option>
+</select>
+
+  <button type="submit" class="btn btn-primary">Записаться</button>
+
+</form>
+
+	
+
